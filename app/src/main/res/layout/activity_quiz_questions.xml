@@ -1,9 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".QuizQuestionsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question_id"
+            android:layout_margin="10dp"
+            android:text="A quel pays appartient ce drapeau ?"
+            android:textSize="22sp"
+            android:textColor="#363A43"
+            ></TextView>
+
+        <ImageView
+            android:id="@+id/image_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_flag_of_argentina"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_details"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="10"
+                android:minHeight="50dp"
+                android:progress="0"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="false">
+            </ProgressBar>
+            <TextView
+                android:id="@+id/progress_details_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0/10"
+                android:padding="15dp"
+                android:textColorHint="#7A8089"
+                android:textSize="14sp"></TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question_option_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Argentine"
+            android:gravity="center"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:layout_margin="15dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/question_option_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Argentine"
+            android:gravity="center"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:layout_margin="15dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/question_option_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Argentine"
+            android:gravity="center"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:layout_margin="15dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/question_option_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Argentine"
+            android:gravity="center"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:layout_margin="15dp"
+            ></TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SOUMETTRE"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:textSize="18sp"></Button>
+    </LinearLayout>
+
+
+</ScrollView>
